@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baklava Boutique | بقلاوة بوتيك</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Arabic Fonts (Cairo) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand-red: #681e22; /* Burgundy from logo */
+            --brand-gold: #d4af37; /* Gold accent */
+            --bg-cream: #fdfbf7;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-cream);
+            background-image: radial-gradient(#d4af37 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .english-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(104, 30, 34, 0.15);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-primary {
+            background: var(--brand-red);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background: #4a1518;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(104, 30, 34, 0.3);
+        }
+
+        .btn-outline {
+            background: white;
+            border: 2px solid var(--brand-red);
+            color: var(--brand-red);
+            transition: all 0.3s ease;
+        }
+        .btn-outline:hover {
+            background: var(--brand-red);
+            color: white;
+        }
+
+        .profile-shadow {
+            box-shadow: 0 0 0 4px white, 0 0 0 8px var(--brand-gold);
+        }
+        
+        /* Smooth fade in animation */
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <main class="w-full max-w-md mx-auto relative">
+        
+        <!-- Main Card -->
+        <div class="glass-card rounded-[40px] overflow-hidden relative animate-fade-in">
+            
+            <!-- Header Pattern -->
+            <div class="h-32 bg-[#681e22] relative flex justify-center">
+                <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');"></div>
+                
+                <!-- Language Toggle (Optional) -->
+                <div class="absolute top-4 left-4">
+                    <button onclick="shareCard()" class="text-white/80 hover:text-white bg-black/20 p-2 rounded-full backdrop-blur-sm transition">
+                        <i class="fas fa-share-alt"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="relative px-6 pb-8 -mt-16 text-center">
+                
+                <!-- Logo Circle -->
+                <div class="w-32 h-32 mx-auto bg-white rounded-full profile-shadow flex items-center justify-center overflow-hidden mb-4 relative z-10">
+                    <!-- IMAGE TAG: Make sure your image file is named 'logo.jpg' and is in the same folder -->
+                    <img src="logo.jpg" alt="Baklava Boutique" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Brand Name -->
+                <h1 class="text-2xl font-bold text-[#681e22] mb-1 english-font">Baklava Boutique</h1>
+                <h2 class="text-lg font-medium text-[#d4af37]">Luxury Delights</h2>
+
+                <!-- Bio -->
+                <div class="mt-4 bg-[#681e22]/5 p-4 rounded-xl border border-[#681e22]/10">
+                    <p class="text-gray-700 text-sm leading-relaxed">
+                        baklava boutique أول محل مختص بصناعة البقلاوة التركية فريش يوميا مع الايس كريم
+                        <i class="fas fa-ice-cream text-pink-400 ml-1"></i>
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="grid gap-4 mt-8">
+                    
+                    <!-- Phone -->
+                    <!-- Updated to include +962 for better connectivity -->
+                    <a href="tel:+962782238202" class="btn-primary w-full py-4 rounded-xl flex items-center justify-center gap-3 shadow-lg group">
+                        <span class="text-lg font-bold dir-ltr" dir="ltr">+962 7 8223 8202</span>
+                        <i class="fas fa-phone-alt group-hover:animate-bounce"></i>
+                    </a>
+
+                    <!-- Location -->
+                    <a href="https://share.google/WxxvvkZywxhN9aEwa" target="_blank" class="btn-outline w-full py-3 rounded-xl flex items-center justify-center gap-2">
+                        <span>الموقع على الخريطة</span>
+                        <i class="fas fa-map-marker-alt text-red-500"></i>
+                    </a>
+
+                </div>
+
+                <!-- Social Media -->
+                <div class="mt-8">
+                    <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Social Media</p>
+                    <div class="flex justify-center gap-6">
+                        
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/baklavaboutique2025/" target="_blank" class="flex flex-col items-center gap-2 group">
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 text-white flex items-center justify-center shadow-md transition transform group-hover:-translate-y-1">
+                                <i class="fab fa-instagram text-2xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 font-medium">Instagram</span>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/profile.php?id=100086328895283" target="_blank" class="flex flex-col items-center gap-2 group">
+                            <div class="w-14 h-14 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-md transition transform group-hover:-translate-y-1">
+                                <i class="fab fa-facebook-f text-2xl"></i>
+                            </div>
+                            <span class="text-xs text-gray-500 font-medium">Facebook</span>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                <!-- Save Contact Button (vCard) -->
+                <button onclick="downloadVCard()" class="mt-10 text-sm text-[#681e22] hover:text-[#d4af37] transition underline decoration-dotted underline-offset-4">
+                    حفظ جهة الاتصال
+                </button>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="bg-[#f8f5f2] py-4 text-center border-t border-gray-100">
+                <p class="text-[10px] text-gray-400 font-light">© 2025 Baklava Boutique</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Script for Contact Logic -->
+    <script>
+        function shareCard() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Baklava Boutique',
+                    text: 'Check out Baklava Boutique - Luxury Turkish Delights',
+                    url: window.location.href,
+                })
+                .catch((error) => console.log('Error sharing', error));
+            } else {
+                // Fallback copy to clipboard
+                const dummy = document.createElement('input');
+                document.body.appendChild(dummy);
+                dummy.value = window.location.href;
+                dummy.select();
+                document.execCommand('copy');
+                document.body.removeChild(dummy);
+                alert('تم نسخ الرابط!');
+            }
+        }
+
+        function downloadVCard() {
+            // Create vCard data
+            const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Baklava Boutique
+ORG:Baklava Boutique
+TEL;TYPE=WORK,VOICE:+962782238202
+URL;TYPE=Instagram:https://www.instagram.com/baklavaboutique2025/
+URL;TYPE=Facebook:https://www.facebook.com/profile.php?id=100086328895283
+URL;TYPE=Location:https://share.google/WxxvvkZywxhN9aEwa
+NOTE:baklava boutique أول محل مختص بصناعة البقلاوة التركية فريش يوميا مع الايس كريم
+END:VCARD`;
+
+            const blob = new Blob([vcard], { type: 'text/vcard' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'BaklavaBoutique.vcf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
